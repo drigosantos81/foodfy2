@@ -1,0 +1,210 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 0 230px;
+    background-color: white;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 213px 1fr;
+    padding: 0;
+    
+}
+
+.header img {
+    width: 90.6px;
+    height: 26.9px;
+    margin: 36.1px 122.4px 30px 0px;
+}
+
+.links {
+    margin: 36.1px 0px 42px 0px;
+}
+
+.links a {
+    color: #111111;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.links a:hover {
+    transition: 700ms;
+    cursor: pointer;
+    color: red;
+}
+
+.centro {
+    width: 100%;
+    height: 366px;
+    background-color: #FBDFBD;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    margin: 0px 0px 50px 0px;
+    padding: 0;
+}
+
+.texto {
+    margin: 117px auto auto 60px;
+    padding: 0px;
+}
+
+.texto h1 {
+    font-size: 32px;
+    color: #111111;
+}
+
+.texto p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+}
+
+.mascote{
+    width: 216px;
+    height: 300px;
+    margin: 65px auto 0px 157px;
+}
+
+.popular {
+    margin: 0px 0px 20px 0px;
+    color: #111111;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pratos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.receita img {
+    width: 100%;
+    height: 140px;
+    border-radius: 20px;
+}
+
+.receita img:hover {
+    cursor: pointer;
+}
+
+.receita h3 {
+    color: #111111;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.receita p {
+    color: #777777;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #EEEEEE;
+    height: 62px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    padding: 0;
+    margin: 40px 0px 0px 0px;
+}
+
+.footer p {
+    padding: 23px 0px 0px 0px;
+    margin: 0px;
+}
+
+.content {
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.sub_content p {
+    color: #111111;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+/* MODAL */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-on {
+    background-color: white;
+    width: 445px;
+    height: 390px;
+    position: fixed;
+    top: 30px;
+    left: 450px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal-on h3 {
+    font-size: 24px;
+    color: #111111;
+    margin: 20px 0px 0px 0px;
+}
+
+.modal-on p {
+    font-size: 18px;
+    color: #777777;
+    margin: 5px 0px 0px 0px;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.image-modal {
+    padding: 20px 20px 0px 20px;
+    
+}
+
+.image-modal img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.close {
+    background-color: #FBDFBD;
+    margin: 60px 0px 0px 0px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
