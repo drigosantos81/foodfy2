@@ -1,16 +1,18 @@
 {
-  "name": "foodFy-2",
+  "name": "foodfy-2",
   "version": "1.0.0",
-  "description": "",
-  "main": "dados.js",
+  "description": "Site de receitas culinárias.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rodrigo Emanuel",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
