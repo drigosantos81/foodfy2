@@ -163,11 +163,12 @@ body {
     background-color: white;
     width: 445px;
     height: 390px;
-    position: fixed;
-    top: 30px;
-    left: 450px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
     border-radius: 20px;
     text-align: center;
+    transform: translate(-50%, -10%);
 }
 
 .modal-on h3 {
