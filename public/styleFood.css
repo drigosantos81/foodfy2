@@ -210,6 +210,30 @@ body {
     cursor: pointer;
 }
 
+.receitaPr img {
+    width: 100%;
+    height: 140px;
+    border-radius: 20px;
+}
+
+.receitaPr img:hover {
+    cursor: pointer;
+}
+
+.receitaPr h3 {
+    color: #111111;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.receitaPr p {
+    color: #777777;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
 /* DESCRIÇÃO PRATO */
 .prato-centro {
     width: 940px;

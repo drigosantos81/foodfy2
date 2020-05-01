@@ -20,7 +20,7 @@
         
         {% for item in items %}
         <div class="receita" id="{{item.id}}">
-            <img src="/{{item.id}}.png" alt="">
+            <img src="/{{item.id}}.png" alt="" onclick="modal()">
             <h3>{{item.title}}</h3>
             <p>{{item.author}}</p>
         </div>
