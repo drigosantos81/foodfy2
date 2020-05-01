@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+    width: 940px;
     margin: 0 230px;
     background-color: white;
 }
@@ -211,7 +212,7 @@ body {
 
 /* DESCRIÇÃO PRATO */
 .prato-centro {
-    width: 100%;
+    width: 940px;
     height: 200px;
     background-color: #FBDFBD;
     margin: 0;
@@ -227,6 +228,7 @@ body {
 .prato-titulo h3 {
     color: #111111;
     font-size: 32px;
+    font-weight: bold;
     line-height: 42px;
     text-align: center;
     padding: 0;
@@ -240,4 +242,34 @@ body {
     text-align: center;
     padding: 0;
     margin: 4px 0px 0px 0px;
+}
+
+.sub-titulos {
+    color: #111111;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    margin: 50px 0px 20px 0px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+}
+
+.sub-titulos div:last-child {
+    color: #999999;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.conteudo-text {
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.conteudo-text ul {
+    margin-left: 2%;
 }
