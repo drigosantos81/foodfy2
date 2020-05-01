@@ -1,8 +1,9 @@
 const express = require('express');
 const routes = express.Router();
+const receitas = require('./dados');
 
 routes.get("/", function(req, res) {
-    return res.render("index");
+    return res.render("index", {items: receitas});
 });
 
 routes.get("/sobre", function(req, res) {
@@ -10,7 +11,7 @@ routes.get("/sobre", function(req, res) {
 });
 
 routes.get("/receitas", function(req, res) {
-    return res.render("receitas");
+    return res.render("receitas", {items: receitas});
 });
 
 module.exports = routes;
