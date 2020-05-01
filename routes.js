@@ -14,4 +14,8 @@ routes.get("/receitas", function(req, res) {
     return res.render("receitas", {items: receitas});
 });
 
+routes.get("/prato", function(req, res) {
+    return res.render("prato", {items: receitas});
+});
+
 module.exports = routes;
