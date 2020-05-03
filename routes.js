@@ -18,4 +18,12 @@ routes.get("/prato", function(req, res) {
     return res.render("prato", {items: receitas});
 });
 
+// routes.get("/prato/:id", function(req, res) {
+//     const pratoIndex = req.params.id;
+//     const prato = receitas[pratoIndex];
+    
+//     // console.log(prato: [pratoIndex]);
+//     return res.render("prato", )
+// });
+
 module.exports = routes;

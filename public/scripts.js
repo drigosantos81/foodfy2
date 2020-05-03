@@ -1,8 +1,6 @@
-const modal = document.querySelector('.modal');
-const grids = document.querySelectorAll('.receita');
-const gridsPr = document.querySelectorAll('.receitaPr');
-
 function modal() {
+    const modal = document.querySelector('.modal');
+    const grids = document.querySelectorAll('.receita');
     for (let grid of grids) {
         grid.addEventListener("click", function() {
             const imageId = grid.getAttribute("id");
@@ -11,9 +9,9 @@ function modal() {
 
             modal.classList.add("active");
             
-            modal.querySelector("img").src=`/${imageId}.png`;
-            modal.querySelector("h3").innerHTML = `${titulo}`;
-            modal.querySelector("p").innerHTML = `${dono}`;
+            modal.querySelector("img").src = imageId; // `${imageId}`
+            modal.querySelector("h3").innerHTML = titulo;
+            modal.querySelector("p").innerHTML = dono;
         });
     }
 
@@ -23,9 +21,12 @@ function modal() {
     });
 }
 
-for (let gridPr of gridsPr) {
-    gridPr.addEventListener("click", function() {
-        const pratoId = gridPr.getAttribute("id");
-        window.location.href = `/prato?id=${pratoId}`;
-    });
+function descPrato() {
+    const grids = document.querySelectorAll('.receita');
+    for (let grid of grids) {
+        gridPr.addEventListener("click", function() {
+            const pratoId = grid.getAttribute("id");
+            window.location.href = `/prato?id=${pratoId}`;
+        });
+    }
 }
