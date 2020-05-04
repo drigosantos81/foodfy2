@@ -9,7 +9,7 @@ function modal() {
 
             modal.classList.add("active");
             
-            modal.querySelector("img").src = imageId; // `${imageId}`
+            modal.querySelector("img").src = imageId;
             modal.querySelector("h3").innerHTML = titulo;
             modal.querySelector("p").innerHTML = dono;
         });
@@ -23,9 +23,9 @@ function modal() {
 
 function descPrato() {
     const grids = document.querySelectorAll('.receita');
-    for (let grid of grids) {
-        gridPr.addEventListener("click", function() {
-            const pratoId = grid.getAttribute("id");
+    for (let i = 0; i < grids.length; i++) {
+        grids.addEventListener("click", function() {
+            const pratoId = grids.getAttribute("id");
             window.location.href = `/prato?id=${pratoId}`;
         });
     }
