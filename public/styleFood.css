@@ -40,6 +40,12 @@ body {
     margin-right: 15px;
 }
 
+.links a.active {
+    font-weight: bold;
+    color: rgb(163, 13, 13);
+    text-decoration: underline;
+}
+
 .links a:hover {
     transition: 700ms;
     cursor: pointer;

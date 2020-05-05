@@ -19,11 +19,16 @@ routes.get("/prato", function(req, res) {
 });
 
 routes.get("/prato/:id", function(req, res) {
-    const pratoIndex = req.params.id;
-    // const prato = receitas[pratoIndex];
+
+    const receitaIndex = req.params.id;
     
-    // console.log({prato});
-    return res.render("prato/:id", { items: receitas[pratoIndex] } );
+    // const receita = receitas.find(function(receita) {
+    //     return receitaIndex == receita.receitaIndex;
+    // });
+
+    // const receita = receitas[receitaIndex];
+  
+    return res.render("prato", { items: receitas });
 });
 
 module.exports = routes;
