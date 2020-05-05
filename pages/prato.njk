@@ -2,12 +2,14 @@
 
 {% block content %}
 
+    {% for item in items %}
+
     <div class="prato-centro">
         <img src="{{item.image}}" alt="Imagem do prato">
     </div>
     
     <div class="prato-titulo">
-        <h3>Triplo bacon burger</h3>
+        <h3>{{item.title}}</h3>
         <p>{{item.author}}</p>
     </div>
     
@@ -15,36 +17,38 @@
         <div>Ingredientes</div>
         <div>ESCONDER</div>
     </div>
-    
 
     <div class="conteudo-text">
         <ul>
-            <li>'3 kg de carne moída (escolha uma carne magra e macia)',</li>
-            <li>'300 g de bacon moído',</li>
-            <li>'1 ovo',</li>
-            <li>'3 colheres (sopa) de farinha de trigo',</li>
-            <li>'3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador',</li>
-            <li>'30 ml de água gelada'</li>
+            {% for ingredient in item.ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+
         </ul>
     </div>
 
-    <div class="sub-titulos">
-        <div>Ingredientes</div>
-        <div>ESCONDER</div>
-    </div>
-
-    <div class="sub-titulos">
-        <div>Ingredientes</div>
+    <div class="sub-titulos-preparo">
+        <div>Modo de preparo</div>
         <div>ESCONDER</div>
     </div>
 
     <div class="conteudo-text">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus purus dui, nec efficitur risus posuere bibendum. Duis vestibulum ut arcu in viverra. Aenean et magna eget orci interdum tempus vel eget massa. Vestibulum volutpat tortor non arcu maximus, vel facilisis eros efficitur. Cras orci quam, eleifend eget posuere nec, aliquam ut ipsum. Nulla dolor purus, malesuada sit amet purus at, eleifend varius nisi. Cras pharetra pulvinar ipsum et consectetur. Cras dictum nibh elit. Vestibulum pretium et massa id rutrum. Aenean tristique, urna ut vestibulum vehicula, ante nibh sollicitudin libero, eget luctus mauris mi sed dolor. Suspendisse sit amet pharetra neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus finibus vestibulum vehicula.
-        </p><br>    
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus purus dui, nec efficitur risus posuere bibendum. Duis vestibulum ut arcu in viverra. Aenean et magna eget orci interdum tempus vel eget massa. Vestibulum volutpat tortor non arcu maximus, vel facilisis eros efficitur. Cras orci quam, eleifend eget posuere nec, aliquam ut ipsum. Nulla dolor purus, malesuada sit amet purus at, eleifend varius nisi. Cras pharetra pulvinar ipsum et consectetur. Cras dictum nibh elit. Vestibulum pretium et massa id rutrum. Aenean tristique, urna ut vestibulum vehicula, ante nibh sollicitudin libero, eget luctus mauris mi sed dolor. Suspendisse sit amet pharetra neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus finibus vestibulum vehicula.
-        </p>
+        <ul>
+            {% for preparation1 in item.preparation %}
+                <li>{{preparation1}}</li>
+            {% endfor %}
+        </ul>
     </div>
+
+    <div class="sub-titulos-info">
+        <div>Informações adicionais</div>
+        <div>ESCONDER</div>
+    </div>
+
+    <div class="conteudo-text">
+        <p>{{item.information}}</p>
+    </div>
+        
+    {% endfor %}
 
 {% endblock %}

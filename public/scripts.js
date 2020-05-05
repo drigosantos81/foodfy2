@@ -23,9 +23,9 @@ function modal() {
 
 function descPrato() {
     const grids = document.querySelectorAll('.receita');
-    for (let i = 0; i < grids.length; i++) {
-        grids.addEventListener("click", function() {
-            const pratoId = grids.getAttribute("id");
+    for (let grid of grids) {
+        grid.addEventListener("click", function() {
+            const pratoId = grid.getAttribute("id");
             window.location.href = `/prato?id=${pratoId}`;
         });
     }

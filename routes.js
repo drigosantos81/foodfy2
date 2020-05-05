@@ -20,9 +20,9 @@ routes.get("/prato", function(req, res) {
 
 routes.get("/prato/:id", function(req, res) {
     const pratoIndex = req.params.id;
-    const prato = receitas[pratoIndex];
+    // const prato = receitas[pratoIndex];
     
-    console.log({prato});
+    // console.log({prato});
     return res.render("prato/:id", { items: receitas[pratoIndex] } );
 });
 
