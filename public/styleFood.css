@@ -251,7 +251,7 @@ body {
     margin: 4px 0px 0px 0px;
 }
 
-.sub-titulos {
+.sub-titulos-ing {
     color: #111111;
     font-size: 24px;
     font-weight: bold;
@@ -262,12 +262,28 @@ body {
     grid-template-columns: 140px 1fr;
 }
 
-.sub-titulos div:last-child {
+.sub-titulos-ing div:nth-child(2) {
     color: #999999;
     font-size: 11px;
     line-height: 14px;
     padding: 0;
     margin: 10px 0 0 0;
+}
+
+.sub-titulos-ing div:nth-child(2):hover {
+    cursor: pointer;
+}
+
+.sub-titulos-ing div:nth-child(3) {
+    color: #999999;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.sub-titulos-ing div:nth-child(3):hover {
+    cursor: pointer;
 }
 
 .sub-titulos-preparo {
@@ -281,12 +297,28 @@ body {
     grid-template-columns: 188px 1fr;
 }
 
-.sub-titulos-preparo div:last-child {
+.sub-titulos-preparo div:nth-child(2) {
     color: #999999;
     font-size: 11px;
     line-height: 14px;
     padding: 0;
     margin: 10px 0 0 0;
+}
+
+.sub-titulos-preparo div:nth-child(2):hover {
+    cursor: pointer;
+}
+
+.sub-titulos-preparo div:nth-child(3) {
+    color: #999999;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.sub-titulos-preparo div:nth-child(3):hover {
+    cursor: pointer;
 }
 
 .sub-titulos-info {
@@ -300,12 +332,28 @@ body {
     grid-template-columns: 255px 1fr;
 }
 
-.sub-titulos-info div:last-child {
+.sub-titulos-info div:nth-child(2) {
     color: #999999;
     font-size: 11px;
     line-height: 14px;
     padding: 0;
     margin: 10px 0 0 0;
+}
+
+.sub-titulos-info div:nth-child(2):hover {
+    cursor: pointer;
+}
+
+.sub-titulos-info div:nth-child(3) {
+    color: #999999;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.sub-titulos-info div:nth-child(3):hover {
+    cursor: pointer;
 }
 
 .conteudo-text {

@@ -39,3 +39,39 @@ function descPrato() {
         });
     }
 }
+
+function ocultaIng() {
+    document.getElementById("ingredientes").style.display = "none";
+    document.getElementById("hideIng").style.display = "none";
+    document.getElementById("showIng").style.display = "block";
+}
+
+function exibeIng() {
+    document.getElementById("ingredientes").style.display = "block";
+    document.getElementById("hideIng").style.display = "block";
+    document.getElementById("showIng").style.display = "none";
+}
+
+function ocultaPreparo() {
+    document.getElementById("preparo").style.display = "none";
+    document.getElementById("hidePreparo").style.display = "none";
+    document.getElementById("showPreparo").style.display = "block";
+}
+
+function exibePreparo() {
+    document.getElementById("preparo").style.display = "block";
+    document.getElementById("hidePreparo").style.display = "block";
+    document.getElementById("showPreparo").style.display = "none";
+}
+
+function ocultaInfo() {
+    document.getElementById("infoAd").style.display = "none";
+    document.getElementById("hideInfo").style.display = "none";
+    document.getElementById("showInfo").style.display = "block";
+}
+
+function exibeInfo() {
+    document.getElementById("infoAd").style.display = "block";
+    document.getElementById("hideInfo").style.display = "block";
+    document.getElementById("showInfo").style.display = "none";
+}
