@@ -221,6 +221,7 @@ body {
     width: 940px;
     height: 200px;
     background-color: #FBDFBD;
+    border-radius: 30px;
     margin: 0;
     padding: 0;
 }
@@ -317,4 +318,16 @@ body {
 
 .conteudo-text ul {
     margin-left: 2%;
+}
+
+.infos {
+    color: #444444;
+    text-align: center;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 20px 0 100px 0;
+}
+
+.infos img {
+    width: 10%;
 }

@@ -14,21 +14,22 @@ routes.get("/receitas", function(req, res) {
     return res.render("receitas", {items: receitas});
 });
 
-routes.get("/prato", function(req, res) {
-    return res.render("prato", {items: receitas});
-});
-
 routes.get("/prato/:id", function(req, res) {
-
     const receitaIndex = req.params.id;
-    
-    // const receita = receitas.find(function(receita) {
-    //     return receitaIndex == receita.receitaIndex;
-    // });
 
-    // const receita = receitas[receitaIndex];
-  
-    return res.render("prato", { items: receitas });
+    const receita = receitas.find(function(receita) {
+        return receitaIndex == receita.id;
+    });
+
+    if (!receita) {
+        return res.render("not-found");
+    }
+    return res.render("prato", { item: receita });
 });
+
+routes.use(function(req, res) {
+    res.status(404).render("not-found");
+});
+
 
 module.exports = routes;
