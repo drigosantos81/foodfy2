@@ -2,16 +2,17 @@ const express = require('express');
 const routes = express.Router();
 const receitas = require('./dados');
 
+// FRONTEND
 routes.get("/", function(req, res) {
-    return res.render("index", {items: receitas});
+    return res.render("frontend/index", {items: receitas});
 });
 
 routes.get("/sobre", function(req, res) {
-    return res.render("sobre");
+    return res.render("frontend/sobre");
 });
 
 routes.get("/receitas", function(req, res) {
-    return res.render("receitas", {items: receitas});
+    return res.render("frontend/receitas", {items: receitas});
 });
 
 routes.get("/prato/:id", function(req, res) {
@@ -24,7 +25,12 @@ routes.get("/prato/:id", function(req, res) {
     if (!receita) {
         return res.render("not-found");
     }
-    return res.render("prato", { item: receita });
+    return res.render("frontend/prato", { item: receita });
+});
+
+//ADMIN
+routes.get("/admin", function(req, res) {
+    return res.render("admin/index");
 });
 
 routes.use(function(req, res) {

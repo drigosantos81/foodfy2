@@ -20,7 +20,6 @@ body {
     display: grid;
     grid-template-columns: 213px 1fr;
     padding: 0;
-    
 }
 
 .header img {
@@ -28,6 +27,11 @@ body {
     height: 26.9px;
     margin: 36.1px 122.4px 30px 0px;
 }
+
+/* .header div:last-child {
+    display: flex;
+    justify-content: right;
+} */
 
 .links {
     margin: 36.1px 0px 42px 0px;
@@ -50,6 +54,29 @@ body {
     transition: 700ms;
     cursor: pointer;
     color: red;
+}
+
+.nav-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.admin {
+    margin: 36.1px 15px 42px 297px;
+    border: 0px solid #555;
+    background-color: #6558C3;
+    border-radius: 20px;
+    color: white;
+}
+
+.admin p {
+    width: 0;
+    margin: 5px 5px 5px 5px;
+}
+
+.admin a {
+    text-decoration: none;
+    color: white;
 }
 
 .centro {
