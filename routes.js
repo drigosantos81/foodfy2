@@ -19,14 +19,9 @@ routes.use("/not-found", front.notFound);
 routes.get("/admin", admin.index);
 routes.get("/admin/prato/:id", admin.exibe); // Exibir detalhes de uma receita
 routes.get("/admin/prato/:id/edit", admin.edita); // Mostrar formulário de edição de receita
+routes.put("/admin/prato", admin.put); // Editar uma receita
 routes.get("/admin/prato/create", admin.criar); // Mostrar formulário de nova receita
-
-// routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
-// routes.put("/admin/recipes", recipes.put); // Editar uma receita
-// routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
+routes.post("/admin/prato", admin.post); // Cadastrar nova receita
+routes.delete("/admin/prato", admin.delete); // Deletar uma receita
 
 module.exports = routes;
-
-// routes.use(function(req, res) {
-//     res.status(404).render("/frontend/not-found");
-// });

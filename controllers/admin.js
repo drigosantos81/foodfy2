@@ -32,9 +32,21 @@ exports.edita = function(req, res) {
     return res.render("admin/editar", { item: receita });
 };
 
+exports.put = function(req, res) {
+    return res.redirect("admin/index");
+};
+
 exports.criar = function(req, res) {
     return res.render("admin/criar");
-}
+};
+
+exports.post = function(req, res) {
+    return res.redirect("admin/index");
+};
+
+exports.delete = function(req, res) {
+    return res.redirect("admin/index");
+};
 
 exports.notFound = function(req, res) {
     res.status(404).render("/frontend/not-found");
