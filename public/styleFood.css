@@ -57,21 +57,42 @@ body {
 }
 
 .admin {
-    margin: 36.1px 15px 42px 297px;
+    margin: 25.1px 0px 0px 292px;
+    border: 0px solid #555;
+    padding: 0 0px 0px 0px;
+
+    /* margin: 36.1px 15px 42px 297px;
     border: 0px solid #555;
     background-color: #6558C3;
     border-radius: 20px;
-    color: white;
+    color: white; */
+}
+
+.admin h4 {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    border-radius: 20px;
+    color: #111111;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .admin p {
-    width: 0;
-    margin: 5px 5px 5px 5px;
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+    background-color: #6558C3;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 0 5px 0;
+    text-align: center;
+    font-size: 14px;
 }
 
 .admin a {
     text-decoration: none;
-    color: white;
+    padding: 0;
 }
 
 .centro {
