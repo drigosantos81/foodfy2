@@ -9,17 +9,15 @@
     <div class="list-receitas">
 
         {% for item in items %}
-            <div class="admin-receita">
+            <div class="admin-receita" id="{{item.id}}">
                 <img src="{{item.image}}" alt="">
                 <div class="list-info">
                     <h3>{{item.title}}</h3>
                     <p>{{item.author}}</p>
-                    <a href="">Visualizar</a>
+                    <a href="/admin/prato/{{item.id}}">Visualizar</a>
                 </div>
             </div>
         {% endfor %}
-
-        
 
     </div>
 

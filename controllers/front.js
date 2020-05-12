@@ -1,7 +1,7 @@
 const receitas = require('../dados.js');
 
 exports.index = function(req, res) {
-    return res.render("frontend/index", {items: receitas});
+    return res.render("frontend/index", { items: receitas });
 };
 
 exports.sobre = function(req, res) {
@@ -9,7 +9,7 @@ exports.sobre = function(req, res) {
 };
 
 exports.receitas = function(req, res) {
-    return res.render("frontend/receitas", {items: receitas});
+    return res.render("frontend/receitas", { items: receitas });
 };
 
 exports.prato = function(req, res) {
