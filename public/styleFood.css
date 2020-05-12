@@ -411,6 +411,7 @@ body {
     height: 80px;
     color: white;
     padding: 0;
+    margin: 0 0 -10px 0;
 }
 
 .container-header-admin {
@@ -482,3 +483,26 @@ body {
     margin: 0;
 }
 
+.container-header-prato div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.container-header-prato div h3 {
+    color: #111111;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.container-header-prato div a {
+    color: white;
+    background-color: #6558c3;
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
