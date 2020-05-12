@@ -21,7 +21,8 @@ module.exports = [
         'Faça no máximo 4 camadas por forma e leve para congelar.',
         'Retire do congelador, frite ou asse e está pronto.'
       ],
-      information: "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
+      information: "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface.",
+      local: "/burger.png"
     },
     {
       id: 2,
@@ -49,7 +50,8 @@ module.exports = [
         'Cubra a massa com mussarela ralada, tomate e orégano a gosto.',
         'Leve novamente ao forno até derreter a mussarela.'
       ],
-      information: 'Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!'
+      information: 'Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!',
+      local: "/pizza.png"
     },
     {
       id: 3,
@@ -67,7 +69,8 @@ module.exports = [
         'Em uma frigideira ou assador coloque o óleo quando estiver quente frite até ficarem douradas.',
         'Para servir fica bonito com salada, ou abuse da criatividade.'
       ],
-      information: ''
+      information: 'Esse prato é também conhecido no Brasil com o nome de PASSARINHA',
+      local: "/asinhas.png"
     },
     {
       id: 4,
@@ -88,7 +91,8 @@ module.exports = [
         'Tempere com sal, pimenta e noz-moscada a gosto.',
         'Desligue o fogo e acrescente o creme de leite; misture bem e reserve.'
       ],
-      information: 'Recheie a lasanha com o que preferir.'
+      information: 'Recheie a lasanha com o que preferir.',
+      local: "/lasanha.png"
     },
     {
       id: 5,
@@ -113,7 +117,8 @@ module.exports = [
         'O dente de alho, serve para você untar os pratos onde serão servidos o macarrão.',
         'Coloque as porções nos pratos já com o cheiro do alho, e enfeite com algumas ervas.'
       ],
-      information: 'Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira.'
+      information: 'Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira.',
+      local: "/espaguete.png"
     },
     {
       id: 6,
@@ -137,5 +142,6 @@ module.exports = [
         'açúcar de confeiteiro e corte em quadrados.'
       ],
       information: 'Doce foi batizado com esse nome em homenagem ao Brigadeiro das forças armadas aéreas que foi candidato a presidência do Brasil nos anos 60.',
+      local: "/doce.png"
     }
   ];
