@@ -17,10 +17,9 @@ routes.use("/not-found", front.notFound);
 
 //ADMIN
 routes.get("/admin", admin.index);
-routes.get("/admin/prato/:id", admin.exibe);
+routes.get("/admin/prato/:id", admin.exibe); // Exibir detalhes de uma receita
 
 // routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita
-// routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receita
 // routes.get("/admin/recipes/:id/edit", recipes.edit); // Mostrar formulário de edição de receita
 
 // routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
