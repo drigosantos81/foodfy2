@@ -19,8 +19,7 @@ routes.use("/not-found", front.notFound);
 routes.get("/admin", admin.index);
 routes.get("/admin/prato/:id", admin.exibe); // Exibir detalhes de uma receita
 routes.get("/admin/prato/:id/edit", admin.edita); // Mostrar formulário de edição de receita
-
-// routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita
+routes.get("/admin/prato/create", admin.criar); // Mostrar formulário de nova receita
 
 // routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
 // routes.put("/admin/recipes", recipes.put); // Editar uma receita
