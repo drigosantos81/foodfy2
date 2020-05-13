@@ -2,77 +2,29 @@
 
 {% block content %}
 
-<div class="card" >
-
     <div class="container-header-prato">
+        
         <div>
-            <h3>Receita: {{item.title}}</h3>
-            <div class="div-container-header-prato">
-                <a href="/admin/prato/{{ item.id }}/edit">Deletar</a>
-                <a href="/admin/prato/{{ item.id }}/edit">Salvar alterações</a>
-            </div>
+            <h3>Editar receita: {{item.title}}</h3>
+            <section class="div-container-header-prato">
+                <form id="form-delete" action="/instructors?_method=DELETE" method="post">
+                    <a href="/admin/prato/{{ item.id }}/edit">Deletar</a>
+                    <a href="/admin/prato/{{ item.id }}/edit">Salvar alterações</a>
+                </form>
+            </section>
         </div>
         
     </div>
 
-    <div class="prato-centro">
-        <img src="{{item.image}}" alt="Imagem do prato {{item.title}}">
-    </div>
-    
-    <div class="prato-titulo">
-        <h3>{{item.title}}</h3>
-        <p>{{item.author}}</p>
-    </div>
-    
-    <div class="sub-titulos-ing">
-        <div>Ingredientes</div>
-        <div id="hideIng" style="display: block" onclick="ocultaIng()">ESCONDER</div>
-        <div id="showIng" style="display: none" onclick="exibeIng()">MOSTRAR</div>
-    </div>
+    <form class="forms" method="POST" action="/instructors?_method=PUT">
 
-    <div id="ingredientes" class="conteudo-text" style="display: block">
-        <ul>
-            {% for ingredient in item.ingredients %}
-                <li>{{ingredient}}</li>
-            {% endfor %}
+        {% include 'admin/campos.njk' %}
 
-        </ul>
-    </div>
+        <input type="hidden" name="id" value="{{ item.id }}">
 
-    <div class="sub-titulos-preparo">
-        <div>Modo de preparo</div>
-        <div id="hidePreparo" style="display: block" onclick="ocultaPreparo()">ESCONDER</div>
-        <div id="showPreparo" style="display: none" onclick="exibePreparo()">MOSTRAR</div>
-    </div>
-
-    <div id="preparo" class="conteudo-text" style="display: block">
-        <ul>
-            {% for preparation1 in item.preparation %}
-                <li>{{preparation1}}</li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="sub-titulos-info">
-        <div>Informações adicionais</div>
-        <div id="hideInfo" style="display: block" onclick="ocultaInfo()">ESCONDER</div>
-        <div id="showInfo" style="display: none" onclick="exibeInfo()">MOSTRAR</div>
-    </div>
-
-    <div id="infoAd" class="conteudo-text" style="display: block">
-        <p>{{item.information}}</p>
-    </div>
+    </form>
 
     <section class="details">
-        <form method="POST" action="/instructors?_method=PUT">
-
-                <h3>Editar Membro</h3>
-
-                {% include 'admin/campos.njk' %}
-
-                <input type="hidden" name="id" value="{{ instructor.id }}">
-
-        </form>
 
             <form id="form-delete" action="/instructors?_method=DELETE" method="post">
                 <input type="hidden" name="id" value="{{ instructor.id }}">
@@ -90,8 +42,6 @@
             </script>
 
     </section>
-    
-</div>
 
 {% endblock %}
 
