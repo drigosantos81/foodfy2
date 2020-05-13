@@ -8,15 +8,25 @@
     <input type="url"value="{{ item.image }}">    
 </div>
 
-<div class="sub-titulos-edit">
+<div id="ingredientes" class="sub-titulos-edit">
     <div>Ingredientes</div>
-    <input type="text"value="{{ item.ingredients }}">
+    {% for ingredient in item.ingredients %}
+        <div id="ingrediente">
+            <input type="text" name="ingredients[]" placeholder="Digite o novo ingrediente" value="{{ ingredient }}">
+        </div>
+    {% endfor %}
 </div>
+<button type="button" class="add-ingredient">Adicinar novo ingrediente</button>
 
-<div class="sub-titulos-edit">
+<div id="preparos" class="sub-titulos-edit">
     <div>Modo de preparo</div>
-    <input type="text"value="{{ item.preparation }}">
+    {% for preparation1 in item.preparation %}
+        <div id="preparo">
+            <input type="text"value="{{ preparation1 }}">
+        </div>        
+    {% endfor %}    
 </div>
+<button type="button" class="add-preparo">Adicinar novo passo</button>
 
 <div class="sub-titulos-edit">
     <div>Informações adicionais</div>

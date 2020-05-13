@@ -75,3 +75,37 @@ function exibeInfo() {
     document.getElementById("hideInfo").style.display = "block";
     document.getElementById("showInfo").style.display = "none";
 }
+
+function addIngredient() {
+    const ingredients = document.querySelector("#ingredientes");
+    const campoContainer = document.querySelectorAll("#ingrediente");
+
+    // Clone do último campo preenchido
+    const newCampo = campoContainer[campoContainer.length - 1].cloneNode(true);
+
+    // Não adiciona novo input se o último estiver vazio
+    if (newCampo.children[0].value == "") {
+        return false;
+    }
+
+    // Deixa o novo input vazio
+    newCampo.children[0].value = "";
+    ingredients.appendChild(newCampo);
+}
+
+function addPreparo() {
+    const preparos = document.querySelector("#preparos");
+    const campoContainer = document.querySelectorAll("#preparo");
+
+    const newCampo = campoContainer[campoContainer.length - 1].cloneNode(true);
+
+    if (newCampo.children[0].value == "") {
+        return false;
+    }
+
+    newCampo.children[0] = "";
+    preparos.appendChild(newCampo);
+}
+
+document.querySelector(".add-ingredient").addEventListener("click", addIngredient);
+document.querySelector(".add-preparo").addEventListener("click", addPreparo);

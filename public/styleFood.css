@@ -504,6 +504,8 @@ body {
     margin: 0;
 }
 
+/* EDITAR */
+
 .container-header-prato div {
     display: flex;
     justify-content: space-between;
@@ -515,7 +517,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     font-weight: bold;
-    margin-top: 5px;
+    margin: 5px 0 20px 0;
 }
 
 .container-header-prato div a {
@@ -543,11 +545,24 @@ body {
 
 .sub-titulos-edit {
     color: #111111;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 28px;
-    margin: 0px 0px 20px 0px;
+    margin: 10px 0px 0px 0px;
     padding: 0;
+}
+
+.add-ingredient, .add-preparo {
+    background-color: white;
+    color: #6558C3;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    margin: 0px 0 30px 0;
+}
+
+.add-ingredient:hover {
+    cursor: pointer;
 }
 
 input {
