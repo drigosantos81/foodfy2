@@ -577,3 +577,15 @@ input {
     line-height: 19px;
     color: #111111;
 }
+
+textarea {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 102%;
+    margin: 20px 0 15px 0px;
+    resize: none;
+    font-size: 16px;
+    font-family: roboto;
+    outline: none;
+    padding: 18px 20px 0 20px;
+}

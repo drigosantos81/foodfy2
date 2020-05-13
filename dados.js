@@ -69,7 +69,7 @@ module.exports = [
         'Em uma frigideira ou assador coloque o óleo quando estiver quente frite até ficarem douradas.',
         'Para servir fica bonito com salada, ou abuse da criatividade.'
       ],
-      information: 'Esse prato é também conhecido no Brasil com o nome de PASSARINHA',
+      information: 'Esse prato é também conhecido no Brasil com o nome de PASSARINHA.',
       local: "/asinhas.png"
     },
     {
