@@ -39,8 +39,9 @@ exports.edita = function(req, res) {
 
 // Executa o comando de atualizar os dados do registro
 exports.put = function(req, res) {
-    const { id } = req.body;
-    let index = 0;
+    // const { id } = req.body;
+    // let index = 0;
+    receitaIndex = req.params.id;
 
     const foundPrato = newReceitas.find(function(prato, foundIndex) {
         if (id == prato.id) {
@@ -63,13 +64,12 @@ exports.put = function(req, res) {
         if (err) {
             return res.send("Erro ao salvar a informação");
         }
-        return res.redirect(`admin/prato`); // /${id}
+        return res.redirect(`admin/prato${id}`); // /${id}
     })
 };
 
-
-
 exports.criar = function(req, res) {
+    
     return res.render("admin/criar");
 };
 

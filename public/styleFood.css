@@ -520,6 +520,7 @@ body {
     margin: 5px 0 20px 0;
 }
 
+.links-titulo-admin a,
 .container-header-prato div a {
     color: #FFFFFF;
     background-color: #6558c3;
@@ -588,4 +589,13 @@ textarea {
     font-family: roboto;
     outline: none;
     padding: 18px 20px 0 20px;
+}
+
+.links-titulo-admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details h3 {
+    font-size: 24px;
 }
