@@ -55,7 +55,7 @@ module.exports = [
     },
     {
       id: 3,
-      image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinhas.png',
+      image: 'https://s2.glbimg.com/3MVl0O50qzz9luD--j2JsLLSnzE=/smart/e.glbimg.com/og/ed/f/original/2018/10/19/cor_-_asinhas_crocantes_ao_molho_barbecue_-_r_31_gustavo_pitta_3_-_imprensa.jpg',
       title: 'Asinhas de frango ao barbecue',
       author: 'Vania Steroski',
       ingredients: [
@@ -70,7 +70,7 @@ module.exports = [
         'Para servir fica bonito com salada, ou abuse da criatividade.'
       ],
       information: 'Esse prato é também conhecido no Brasil com o nome de PASSARINHA.',
-      local: "/asinhas.png"
+      local: "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinhas.png"
     },
     {
       id: 4,
@@ -96,7 +96,7 @@ module.exports = [
     },
     {
       id: 5,
-      image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/espaguete.png',
+      image: 'https://img.itdg.com.br/tdg/images/recipes/000/057/710/324571/324571_original.jpg',
       title: 'Espaguete ao alho',
       author: 'Júlia Kinoto',
       ingredients: [
@@ -118,7 +118,7 @@ module.exports = [
         'Coloque as porções nos pratos já com o cheiro do alho, e enfeite com algumas ervas.'
       ],
       information: 'Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira.',
-      local: "/espaguete.png"
+      local: "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/espaguete.png"
     },
     {
       id: 6,

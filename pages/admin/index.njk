@@ -9,13 +9,11 @@
         <a href="/admin/criar">Novo</a>
     </section>
 
-
-
     <div class="list-receitas">
 
         {% for item in items %}
             <div class="admin-receita" id="{{item.id}}">
-                <img src="{{item.local}}" alt="">
+                <img src="{{item.image}}" alt="">
                 <div class="list-info">
                     <h3>{{item.title}}</h3>
                     <p>{{item.author}}</p>

@@ -11,7 +11,7 @@ exports.index = function(req, res) {
 exports.exibe = function(req, res) {
     const receitaIndex = req.params.id;
 
-    const receita = receitas.find(function(receita) {
+    const receita = newReceitas.receitas.find(function(receita) {
         return receitaIndex == receita.id;
     });
 

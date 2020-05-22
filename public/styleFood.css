@@ -506,6 +506,20 @@ body {
 
 /* EDITAR */
 
+.container-header-exibe-prato div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0 10px 0; 
+}
+
+.container-header-exibe-prato h3 {
+    color: #111111;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+}
+
 .container-header-prato div {
     display: flex;
     justify-content: space-between;
@@ -520,7 +534,7 @@ body {
     margin: 5px 0 20px 0;
 }
 
-button, .links-titulo-admin a,
+button, .container-header-exibe-prato a, .links-titulo-admin a,
 .container-header-prato div a {
     color: #FFFFFF;
     background-color: #6558c3;
