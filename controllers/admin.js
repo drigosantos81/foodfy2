@@ -4,7 +4,7 @@ const newReceitas = require('../dados.json')
 
 // Exibe a página inicial do Admin
 exports.index = function(req, res) {
-    return res.render("admin/index", { items: receitas });
+    return res.render("admin/index", { items: newReceitas.receitas });
 };
 
 // Exibe a página de detalhamento do prato
@@ -68,13 +68,29 @@ exports.put = function(req, res) {
     })
 };
 
-exports.criar = function(req, res) {
-    
+exports.criar = function(req, res) {    
     return res.render("admin/criar");
 };
 
 exports.post = function(req, res) {
-    return res.send(req.body);
+
+    const chaves = Object.keys(req.body);
+
+    for (chave of chaves) {
+        if (req.body[chave] == "") {
+            return res.send("Preencha todos os campos");
+        }
+    }
+
+    newReceitas.receitas.push(req.body)
+
+    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+        if (err) {
+            return res.send("Erro ao salvar as informações.");
+        }
+        return res.redirect("admin");
+    });
+
 };
 
 exports.delete = function(req, res) {
