@@ -9,17 +9,24 @@ exports.index = function(req, res) {
 
 // Exibe a página de detalhamento do prato
 exports.exibe = function(req, res) {
-    const receitaIndex = req.params.id;
 
-    const receita = newReceitas.receitas.find(function(receita) {
-        return receitaIndex == receita.id;
+    const { id } = req.params;
+
+    const foundPrato = newReceitas.receitas.find(function(item) {
+        return item.id == id;
     });
 
-    if (!receita) {
+    if (!foundPrato) {
         return res.render("frontend/not-found");
     }
 
-    return res.render("admin/prato", { item: receita });
+    //  Ajuste dos dados nos campos escolhidos
+    const item = {
+        ...foundPrato, // Spread
+        criadoEm: "",
+    }
+
+    return res.render("admin/prato", { item });
 };
 
 // Exibe o formulário de edição com os campos preenchidos
@@ -82,8 +89,27 @@ exports.post = function(req, res) {
         }
     }
 
-    newReceitas.receitas.push(req.body)
+    // Desestruturação do (req.body), ou seja, todas as informações do fomrmulário na DOM.
+    // (req.body) que representa todas as informações nos campos do formulário, agora estão dentro de uma variável.
+    // Utilizado para tratar as informações em campos específicos.
+    let { image, title, author, description, preparation, information } = req.body;
 
+    // Os campos que não vieram no formulário precisam estar em variaveis cada, para trabalhar com a desestruturação do (req.body)
+    const id = Number(newReceitas.receitas.length + 1); // Inserindo informação num campo automaticamente, sem aparecer na tela
+    const criadoEm = Date.now();
+
+    newReceitas.receitas.push({
+        id, 
+        image,
+        title,
+        author,
+        description, 
+        preparation,
+        information,
+        criadoEm
+    });
+
+    // Gravando as informações no arquivo.
     fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
         if (err) {
             return res.send("Erro ao salvar as informações.");
