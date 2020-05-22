@@ -1,11 +1,11 @@
 <div class="sub-titulos-edit">
     <div>Título da receita</div>
-    <input type="text"value="{{ item.title }}">
+    <input type="text" value="{{ item.title }}">
 </div>
 
 <div class="sub-titulos-edit">
     <div>URL da imagem da receita</div>
-    <input type="url"value="{{ item.image }}">    
+    <input type="url" value="{{ item.image }}">    
 </div>
 
 <div id="ingredientes" class="sub-titulos-edit">
@@ -22,7 +22,7 @@
     <div>Modo de preparo</div>
     {% for preparation1 in item.preparation %}
         <div id="preparo">
-            <input type="text"value="{{ preparation1 }}">
+            <input type="text" name="preparation[]" value="{{ preparation1 }}">
         </div>        
     {% endfor %}    
 </div>

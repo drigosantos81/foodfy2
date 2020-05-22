@@ -74,7 +74,7 @@ exports.criar = function(req, res) {
 };
 
 exports.post = function(req, res) {
-    return res.redirect("admin/index");
+    return res.send(req.body);
 };
 
 exports.delete = function(req, res) {

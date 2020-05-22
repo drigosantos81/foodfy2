@@ -17,13 +17,13 @@ routes.use("/not-found", front.notFound);
 
 //ADMIN
 routes.get("/admin", admin.index);
+routes.get("/admin/criar", admin.criar); // Mostrar formulário de nova receita
+routes.post("/admin", admin.post); // Cadastrar nova receita
+
 routes.get("/admin/prato/:id", admin.exibe); // Exibir detalhes de uma receita
 routes.get("/admin/prato/:id/edit", admin.edita); // Mostrar formulário de edição de receita
 routes.put("/admin/prato", admin.put); // Editar uma receita
 
-routes.get("/admin/criar", admin.criar); // Mostrar formulário de nova receita
-
-routes.post("/admin/prato", admin.post); // Cadastrar nova receita
 routes.delete("/admin/prato", admin.delete); // Deletar uma receita
 
 module.exports = routes;

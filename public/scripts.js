@@ -77,6 +77,7 @@ function exibeInfo() {
 }
 
 function addIngredient() {
+
     const ingredients = document.querySelector("#ingredientes");
     const campoContainer = document.querySelectorAll("#ingrediente");
 
@@ -103,7 +104,7 @@ function addPreparo() {
         return false;
     }
 
-    newCampo.children[0] = "";
+    newCampo.children[0].value = "";
     preparos.appendChild(newCampo);
 }
 

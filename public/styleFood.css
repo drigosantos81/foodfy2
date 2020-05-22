@@ -448,7 +448,7 @@ body {
 
 .container-admin {
     width: 940px;    
-    margin: 30px 230px 0 230px;
+    margin: 30px 230px 20px 230px;
     background-color: white;
 }
 
@@ -520,7 +520,7 @@ body {
     margin: 5px 0 20px 0;
 }
 
-.links-titulo-admin a,
+button, .links-titulo-admin a,
 .container-header-prato div a {
     color: #FFFFFF;
     background-color: #6558c3;
@@ -562,7 +562,7 @@ body {
     margin: 0px 0 30px 0;
 }
 
-.add-ingredient:hover {
+button, .add-ingredient, .add-preparo:hover {
     cursor: pointer;
 }
 
