@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Intl = require('intl');
-const receitas = require('../dados.js');
-const newReceitas = require('../dados.json')
+const receitas = require('../dados.js'); // Arquivo de dados JS
+const newReceitas = require('../dados.json'); // Arquivo de dados JSON
 
 // Exibe a página inicial do Admin
 exports.index = function(req, res) {
@@ -30,58 +30,12 @@ exports.exibe = function(req, res) {
     return res.render("admin/prato", { item });
 };
 
-// Exibe o formulário de edição com os campos preenchidos
-exports.edita = function(req, res) {
-    
-    const { id } = req.params;
-
-    const foundPrato = newReceitas.receitas.find(function(item) {
-        return item.id == id;
-    });
-
-    if (!foundPrato) {
-        return res.render("frontend/not-found");
-    }
-
-    return res.render("admin/editar", { item: foundPrato });
-
-};
-
-// Executa o comando de atualizar os dados do registro
-exports.put = function(req, res) {
-    // const { id } = req.body;
-    // let index = 0;
-    receitaIndex = req.params.id;
-
-    const foundPrato = newReceitas.find(function(prato, foundIndex) {
-        if (id == prato.id) {
-            index = foundIndex;
-            return true;
-        };
-    });
-    
-    if (!foundPrato){
-        return res.send("Instructor não encontrado.");
-    }
-
-    const prato = {
-        ...foundPrato,
-        ...req.body,
-        id: Number(req.body.id),
-    }
-
-    fs.writeFile("dados.js", JSON.stringify(data, null, 2), function(err) {
-        if (err) {
-            return res.send("Erro ao salvar a informação");
-        }
-        return res.redirect(`admin/prato${id}`); // /${id}
-    })
-};
-
+// Exibe o formulário de cadastro de nova receita
 exports.criar = function(req, res) {    
     return res.render("admin/criar");
 };
 
+// Executa o comando de salvar novo registro
 exports.post = function(req, res) {
 
     const chaves = Object.keys(req.body);
@@ -122,6 +76,61 @@ exports.post = function(req, res) {
 
 };
 
+// Exibe o formulário de edição com os campos preenchidos
+exports.edita = function(req, res) {
+    
+    const { id } = req.params;
+
+    const foundPrato = newReceitas.receitas.find(function(item) {
+        return item.id == id;
+    });
+
+    if (!foundPrato) {
+        return res.render("frontend/not-found");
+    }
+
+    return res.render("admin/editar", { item: foundPrato });
+
+};
+
+// Executa o comando de atualizar os dados do registro
+exports.put = function(req, res) {
+    
+    const { id } = req.body;
+    
+    // Váriavel para guardar o index
+    let index = 0;
+
+    // 'find' é uma estrutura de repetição. Pode receber dois parametros. O segundo é o índice encontrado
+    const foundPrato = newReceitas.receitas.find(function(item, foundIndex) {
+        if (id == item.id) {
+            index = foundIndex;
+            return true;
+        }
+    });
+
+    if (!foundPrato) {
+        return res.render("frontend/not-found");
+    }
+
+    const item = {
+        ...foundPrato,
+        ...req.body
+    }
+
+    // Verificação da posição do index
+    newReceitas.receitas[index] = item;
+
+    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+        if (err) {
+            return res.send("Erro ao salvar a informação");
+        }
+
+        return res.redirect(`prato/${id}`);
+    });
+};
+
+// Comando para deletar o registro encontrado
 exports.delete = function(req, res) {
     return res.redirect("admin/index");
 };
