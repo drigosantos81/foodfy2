@@ -244,6 +244,31 @@
       ],
       "information": "Metal.",
       "criadoEm": 1590178311665
+    },
+    {
+      "id": 14,
+      "image": "https://image.flaticon.com/icons/svg/2729/2729027.svg",
+      "title": "Feijoada",
+      "author": "Carla Simões",
+      "preparation": [
+        "Bater no liquidificador."
+      ],
+      "information": "Misturar com farofa.",
+      "criadoEm": 1590189726007
+    },
+    {
+      "id": 15,
+      "image": "https://image.flaticon.com/icons/svg/2729/2729032.svg",
+      "title": "Strogonoff",
+      "author": "Rodrigo",
+      "ingredients": [
+        "Frango"
+      ],
+      "preparation": [
+        "Molho"
+      ],
+      "information": "Mistureba.",
+      "criadoEm": 1590189888744
     }
   ],
   "users": []

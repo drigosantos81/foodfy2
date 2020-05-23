@@ -1,4 +1,5 @@
 const fs = require('fs');
+const Intl = require('intl');
 const receitas = require('../dados.js');
 const newReceitas = require('../dados.json')
 
@@ -23,7 +24,7 @@ exports.exibe = function(req, res) {
     //  Ajuste dos dados nos campos escolhidos
     const item = {
         ...foundPrato, // Spread
-        criadoEm: "",
+        criadoEm: new Intl.DateTimeFormat("pt-BR").format(foundPrato.criadoEm),
     }
 
     return res.render("admin/prato", { item });
@@ -31,17 +32,19 @@ exports.exibe = function(req, res) {
 
 // Exibe o formulário de edição com os campos preenchidos
 exports.edita = function(req, res) {
-    const receitaIndex = req.params.id;
+    
+    const { id } = req.params;
 
-    const receita = receitas.find(function(receita) {
-        return receitaIndex == receita.id;
+    const foundPrato = newReceitas.receitas.find(function(item) {
+        return item.id == id;
     });
 
-    if (!receita) {
+    if (!foundPrato) {
         return res.render("frontend/not-found");
     }
 
-    return res.render("admin/editar", { item: receita });
+    return res.render("admin/editar", { item: foundPrato });
+
 };
 
 // Executa o comando de atualizar os dados do registro
@@ -92,7 +95,7 @@ exports.post = function(req, res) {
     // Desestruturação do (req.body), ou seja, todas as informações do fomrmulário na DOM.
     // (req.body) que representa todas as informações nos campos do formulário, agora estão dentro de uma variável.
     // Utilizado para tratar as informações em campos específicos.
-    let { image, title, author, description, preparation, information } = req.body;
+    let { image, title, author, ingredients, preparation, information } = req.body;
 
     // Os campos que não vieram no formulário precisam estar em variaveis cada, para trabalhar com a desestruturação do (req.body)
     const id = Number(newReceitas.receitas.length + 1); // Inserindo informação num campo automaticamente, sem aparecer na tela
@@ -103,7 +106,7 @@ exports.post = function(req, res) {
         image,
         title,
         author,
-        description, 
+        ingredients, 
         preparation,
         information,
         criadoEm
