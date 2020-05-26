@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap";
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
@@ -11,8 +12,9 @@ body {
 }
 
 .container {
-    width: 940px;
-    margin: 0 230px;
+    width: 100%;
+    max-width: 940px;
+    margin: auto;
     background-color: white;
 }
 
@@ -60,12 +62,6 @@ body {
     margin: 25.1px 0px 0px 292px;
     border: 0px solid #555;
     padding: 0 0px 0px 0px;
-
-    /* margin: 36.1px 15px 42px 297px;
-    border: 0px solid #555;
-    background-color: #6558C3;
-    border-radius: 20px;
-    color: white; */
 }
 
 .admin h4 {
@@ -257,6 +253,7 @@ body {
     margin: 30px 0px 0px 0px;
     padding: 5px 10px;
     border-radius: 20px;
+    color: #111111;
 }
 
 .close:hover {
