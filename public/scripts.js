@@ -30,6 +30,10 @@ function modal() {
     });
 }
 
+    document.getAttribute("id").addEventListener("click", function() {
+    window.location.href = `/prato/${imageId}`;
+});
+
 function descPrato() {
     const grids = document.querySelectorAll('.receita');
     for (let grid of grids) {
@@ -77,11 +81,10 @@ function exibeInfo() {
 }
 
 function addIngredient() {
-
     const ingredients = document.querySelector("#ingredientes");
     const campoContainer = document.querySelectorAll("#ingrediente");
 
-    // Clone do último campo preenchido
+    // Clone do último campo pr eenchido
     const newCampo = campoContainer[campoContainer.length - 1].cloneNode(true);
 
     // Não adiciona novo input se o último estiver vazio
@@ -92,6 +95,7 @@ function addIngredient() {
     // Deixa o novo input vazio
     newCampo.children[0].value = "";
     ingredients.appendChild(newCampo);
+    
 }
 
 function addPreparo() {
@@ -106,7 +110,5 @@ function addPreparo() {
 
     newCampo.children[0].value = "";
     preparos.appendChild(newCampo);
+    
 }
-
-document.querySelector(".add-ingredient").addEventListener("click", addIngredient);
-document.querySelector(".add-preparo").addEventListener("click", addPreparo);
