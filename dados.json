@@ -1,25 +1,9 @@
 {
   "receitas": [
     {
-      "id": 7,
-      "title": "Crocodilo Dundee",
+      "id": "7",
+      "title": "Crocodilo Dundee 1",
       "image": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg",
-      "ingredients": [
-        "Ingrediente 1",
-        "Ingrediente 2"
-      ],
-      "preparation": [
-        "Passo 1",
-        "Passo 2",
-        "Passo 3"
-      ],
-      "information": "Observações!!!",
-      "local": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg"
-    },
-    {
-      "id": "8",
-      "title": "The NeverEnding Story",
-      "image": "https://image.flaticon.com/icons/svg/2729/2729005.svg",
       "ingredients": [
         "Ingrediente 1",
         "Ingrediente 2",
@@ -27,9 +11,33 @@
       ],
       "preparation": [
         "Passo 1",
-        "Passo 2"
+        "Passo 2",
+        "Passo 3",
+        "Passo 4"
       ],
-      "information": "Filme."
+      "information": "Filme clássico.",
+      "local": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg",
+      "author": "Hollywood"
+    },
+    {
+      "id": "8",
+      "title": "História Sem Fim",
+      "image": "https://image.flaticon.com/icons/svg/2729/2729005.svg",
+      "ingredients": [
+        "Ingrediente 1",
+        "Ingrediente 2",
+        "Ingrediente 3",
+        "Ingrediente 4",
+        "Ingrediente 5"
+      ],
+      "preparation": [
+        "Passo 1",
+        "Passo 2",
+        "Passo 3",
+        "Passo 4"
+      ],
+      "information": "Filme Anos 80.",
+      "author": "Cinefólo"
     },
     {
       "id": "1",
@@ -37,12 +45,14 @@
       "title": "Triplo bacon burger",
       "author": "Jorge Relato",
       "ingredients": [
-        "3 kg de carne moída (escolha uma carne magra e macia)",
+        "3 kg de carne moída (escolha uma carne magra e macia)2",
         "300 g de bacon moído",
         "1 ovo",
         "3 colheres (sopa) de farinha de trigo",
         "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
-        "30 ml de água gelada"
+        "30 ml de água gelada",
+        "Teste 1",
+        "Ingrediente 2"
       ],
       "preparation": [
         "Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado.",
@@ -51,7 +61,8 @@
         "Faça um de cada vez e retire o aro logo em seguida.",
         "Forre uma assadeira de metal com plástico, coloque os hambúrgueres e intercale camadas de carne e plásticos (sem apertar).",
         "Faça no máximo 4 camadas por forma e leve para congelar.",
-        "Retire do congelador, frite ou asse e está pronto."
+        "Retire do congelador, frite ou asse e está pronto.",
+        "Passo 2"
       ],
       "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface.",
       "local": "/burger.png"

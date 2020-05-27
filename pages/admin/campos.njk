@@ -1,16 +1,16 @@
 <div class="sub-titulos-edit">
     <div>Título da receita</div>
-    <input type="text" value="{{ item.title }}">
+    <input type="text" name="title" value="{{ item.title }}">
 </div>
 
 <div class="sub-titulos-edit">
     <div>Autor da receita</div>
-    <input type="text" value="{{ item.author }}">
+    <input type="text" name="author" value="{{ item.author }}">
 </div>
 
 <div class="sub-titulos-edit">
     <div>URL da imagem da receita</div>
-    <input type="url" value="{{ item.image }}">    
+    <input type="url" name="image" value="{{ item.image }}">    
 </div>
 
 <div id="ingredientes" class="sub-titulos-edit">
@@ -35,7 +35,7 @@
 
 <div class="sub-titulos-edit">
     <div>Informações adicionais</div>
-    <textarea name="" id="" cols="1" rows="10">{{ item.information }}</textarea>
+    <textarea name="information" id="" cols="1" rows="10">{{ item.information }}</textarea>
 </div>
 
 <button type="submit">Salvar</button>
