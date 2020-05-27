@@ -8,11 +8,6 @@ exports.index = function(req, res) {
     return res.render("admin/index", { items: newReceitas.receitas });
 };
 
-// Exibe o formulário de cadastro de nova receita
-exports.criar = function(req, res) {    
-    return res.render("admin/criar");
-};
-
 // Exibe o formulário de edição com os campos preenchidos
 exports.edita = function(req, res) {
     
@@ -68,7 +63,6 @@ exports.put = function(req, res) {
         return res.redirect(`prato/${id}`);
     });
 };
-
 
 // Exibe a página de detalhamento do prato
 exports.exibe = function(req, res) {
@@ -136,6 +130,11 @@ exports.post = function(req, res) {
 // Comando para deletar o registro encontrado
 exports.delete = function(req, res) {
     return res.redirect("admin/index");
+};
+
+// Exibe o formulário de cadastro de nova receita
+exports.criar = function(req, res) {    
+    return res.render("admin/criar");
 };
 
 exports.notFound = function(req, res) {

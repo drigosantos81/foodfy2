@@ -270,16 +270,34 @@
     {
       "id": "15",
       "image": "https://image.flaticon.com/icons/svg/2729/2729032.svg",
-      "title": "Strogonoff",
-      "author": "Rodrigo",
+      "title": "Strogonoff de Frango",
+      "author": "Rodrigo Emanuel",
       "ingredients": [
-        "Frango"
+        "Frango",
+        "Batata palha"
       ],
       "preparation": [
-        "Molho"
+        "Molho",
+        "Mistura tudo"
       ],
-      "information": "Mistureba.",
+      "information": "Comiga Russa.",
       "criadoEm": 1590189888744
+    },
+    {
+      "id": "16",
+      "image": "https://image.flaticon.com/icons/svg/2729/2729027.svg",
+      "title": "Rabanada",
+      "author": "Rodrigo",
+      "ingredients": [
+        "Pão",
+        "Tomate"
+      ],
+      "preparation": [
+        "Queijo",
+        "Saladas"
+      ],
+      "information": "Teste.",
+      "criadoEm": 1590605340298
     }
   ],
   "users": []
