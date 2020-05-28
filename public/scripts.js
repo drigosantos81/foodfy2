@@ -30,9 +30,9 @@ function modal() {
     });
 }
 
-    document.getAttribute("id").addEventListener("click", function() {
-    window.location.href = `/prato/${imageId}`;
-});
+//     document.getAttribute("id").addEventListener("click", function() {
+//     window.location.href = `/prato/${imageId}`;
+// });
 
 function descPrato() {
     const grids = document.querySelectorAll('.receita');

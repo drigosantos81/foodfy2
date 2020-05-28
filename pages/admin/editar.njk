@@ -2,45 +2,41 @@
 
 {% block content %}
 
-    <div class="container-header-prato">
-        
-        <div>
-            <h3>Editar receita: {{item.title}}</h3>
-            <section class="div-container-header-prato">
-                <form id="form-delete" action="/instructors?_method=DELETE" method="post">
-                    <a href="/admin/prato/{{ item.id }}/edit">Deletar</a>
-                    <a href="/admin/prato/{{ item.id }}/edit">Salvar alterações</a>
-                </form>
-            </section>
+    
+        <div class="container-header-prato">
+            <div>
+                <h3>Editar receita: {{item.title}}</h3>
+                <section class="div-container-header-prato">
+                    
+                    <form id="form-delete" action="/admin?_method=DELETE" method="post">
+                        <input type="hidden" name="id" value="{{item.id}}">
+                        <button type="submit">Deletar</button>
+                    </form>
+
+                    <form method="POST" action="/admin/prato?_method=PUT">
+                    
+                    <button type="submit">Salvar alterações</button>
+
+                </section>
+            </div>
         </div>
-        
-    </div>
-
-    <form method="POST" action="/admin/prato?_method=PUT">
-
-        {% include 'admin/campos.njk' %}
-
-        <input type="hidden" name="id" value="{{ item.id }}">
-
+    
+            {% include 'admin/campos.njk' %}
+            
     </form>
 
     <section class="details">
-
-            <form id="form-delete" action="/instructors?_method=DELETE" method="post">
-                <input type="hidden" name="id" value="{{ instructor.id }}">
-                <button type="submit">Deletar</button>
-            </form>
-
-            <script>
-                const formDelete = document.querySelector("#form-delete");
-                formDelete.addEventListener("submit", function(event) {
-                    const confirmation = confirm("Deseja deletar este usuário?");
-                    if (!confirmation) {
-                        event.preventDefault();
-                    }
-                });
-            </script>
-
+        <script>
+            const formDelete = document.querySelector("#form-delete");
+            formDelete.addEventListener("submit", function(event) {
+                const confirmation = confirm("Confirma a exclusão desta receita?");
+                if (!confirmation) {
+                    event.preventDefault();
+                }
+            });
+        </script>
     </section>
 
 {% endblock %}
+
+

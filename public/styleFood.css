@@ -554,16 +554,17 @@ button, .container-header-exibe-prato a, .links-titulo-admin a,
     outline: none;
 }
 
-.container-header-prato div a:nth-child(1) {
+.container-header-prato div button:nth-child(2) {
     background-color: #dc4747;
     color: #FFFFFF;
 }
 
 .div-container-header-prato {
+    display: flex;
     margin: 0px;
 }
 
-.div-container-header-prato a {
+.div-container-header-prato form {
     margin: 0 2px;
 }
 

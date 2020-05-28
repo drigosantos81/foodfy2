@@ -8,82 +8,9 @@ exports.index = function(req, res) {
     return res.render("admin/index", { items: newReceitas.receitas });
 };
 
-// Exibe o formulário de edição com os campos preenchidos
-exports.edita = function(req, res) {
-    
-    const { id } = req.params;
-
-    const foundPrato = newReceitas.receitas.find(function(item) {
-        return item.id == id;
-    });
-
-    if (!foundPrato) {
-        return res.render("frontend/not-found");
-    }
-
-    return res.render("admin/editar", { item: foundPrato });
-
-};
-
-// Executa o comando de atualizar os dados do registro
-exports.put = function(req, res) {
-    
-    const { id } = req.body;
-    // console.log(id);
-    // console.log(req.body);    
-    
-    // Váriavel para guardar o index
-    let index = 0;
-
-    // 'find' é uma estrutura de repetição. Pode receber dois parametros. O segundo é o índice encontrado
-    const foundPrato = newReceitas.receitas.find(function(item, foundIndex) {
-        if (id == item.id) {
-            index = foundIndex;
-            return true;
-        }
-    });
-
-    if (!foundPrato) {
-        return res.render("frontend/not-found");
-    }
-
-    const item = {
-        ...foundPrato,
-        ...req.body
-    }
-
-    // Verificação da posição do index
-    newReceitas.receitas[index] = item;
-
-    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
-        if (err) {
-            return res.send("Erro ao salvar a informação");
-        }
-
-        return res.redirect(`prato/${id}`);
-    });
-};
-
-// Exibe a página de detalhamento do prato
-exports.exibe = function(req, res) {
-
-    const { id } = req.params;
-
-    const foundPrato = newReceitas.receitas.find(function(item) {
-        return item.id == id;
-    });
-
-    if (!foundPrato) {
-        return res.render("frontend/not-found");
-    }
-
-    //  Ajuste dos dados nos campos escolhidos
-    const item = {
-        ...foundPrato, // Spread
-        criadoEm: new Intl.DateTimeFormat("pt-BR").format(foundPrato.criadoEm),
-    }
-
-    return res.render("admin/prato", { item });
+// Exibe o formulário de cadastro de nova receita
+exports.criar = function(req, res) {    
+    return res.render("admin/criar");
 };
 
 // Executa o comando de salvar novo registro
@@ -127,14 +54,108 @@ exports.post = function(req, res) {
 
 };
 
-// Comando para deletar o registro encontrado
-exports.delete = function(req, res) {
-    return res.redirect("admin/index");
+// Exibe a página de detalhamento do prato
+exports.exibe = function(req, res) {
+
+    const { id } = req.params;
+
+    const foundPrato = newReceitas.receitas.find(function(item) {
+        return item.id == id;
+    });
+
+    if (!foundPrato) {
+        return res.render("frontend/not-found");
+    }
+
+    //  Ajuste dos dados nos campos escolhidos
+    const item = {
+        ...foundPrato, // Spread
+        criadoEm: new Intl.DateTimeFormat("pt-BR").format(foundPrato.criadoEm),
+    }
+
+    
+    console.log(id);
+    console.log(foundPrato); 
+    console.log(req.params);    
+
+    return res.render("admin/prato", { item });
 };
 
-// Exibe o formulário de cadastro de nova receita
-exports.criar = function(req, res) {    
-    return res.render("admin/criar");
+// Exibe o formulário de edição com os campos preenchidos
+exports.edita = function(req, res) {
+    
+    const { id } = req.params;
+
+    const foundPrato = newReceitas.receitas.find(function(item) {
+        return item.id == id;
+    });
+
+    if (!foundPrato) {
+        return res.render("frontend/not-found");
+    }
+
+    return res.render("admin/editar", { item: foundPrato });
+
+};
+
+// Executa o comando de atualizar os dados do registro
+exports.put = function(req, res) {
+    
+    const { id } = req.body;
+    // Váriavel para guardar o index
+    let index = 0;
+
+    // 'find' é uma estrutura de repetição. Pode receber dois parametros. O segundo é o índice encontrado
+    const foundPrato = newReceitas.receitas.find(function(item, foundIndex) {
+        if (id == item.id) {
+            index = foundIndex;
+            return true;
+        }
+    });
+
+    if (!foundPrato) {
+        return res.render("frontend/not-found");
+    }
+
+    const item = {
+        ...foundPrato,
+        ...req.body
+    }
+
+    // Verificação da posição do index
+    newReceitas.receitas[index] = item;
+
+    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+        if (err) {
+            return res.send("Erro ao salvar a informação");
+        }
+
+        return res.redirect(`prato/${id}`);
+    });
+        
+    console.log(id);
+    console.log(req.body);   
+};
+
+// Comando para deletar o registro encontrado
+exports.delete = function(req, res) {
+    const { id } = req.body;
+    
+    // Função de busca no array 'filter'
+    const filtroPrato = newReceitas.receitas.filter(function(item) {
+        return item.id != id;
+    });
+
+    newReceitas.receitas = filtroPrato;
+
+    console.log(filtroPrato);   
+    
+    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+        if (err) {
+            return res.send("Erro ao salvar a informação");
+        }
+        return res.redirect("/admin");
+    });
 };
 
 exports.notFound = function(req, res) {
