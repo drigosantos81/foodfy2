@@ -420,10 +420,6 @@ body {
     border-radius: 10px;
 }
 
-/* .list-info {
-
-} */
-
 .list-info h3 {
     color: #111111;
     font-size: 18px;
@@ -469,14 +465,6 @@ body {
     margin: 0px 0 10px 0; 
 }
 
-.container-header-prato div h3 {
-    color: #111111;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: bold;
-    margin: 5px 0 20px 0;
-}
-
 button, .container-header-exibe-prato a, .links-titulo-admin a,
 .container-header-prato div a {
     color: #FFFFFF;
@@ -489,7 +477,8 @@ button, .container-header-exibe-prato a, .links-titulo-admin a,
     outline: none;
 }
 
-.container-header-prato div button:nth-child(2) {
+/* :nth-child(2) */
+.container-header-prato div form button {
     background-color: #dc4747;
     color: #FFFFFF;
 }

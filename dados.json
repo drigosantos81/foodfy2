@@ -2,20 +2,24 @@
   "receitas": [
     {
       "id": "1",
-      "title": "Crocodilo Dundee",
+      "title": "Crocodilo Dundee III",
       "image": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg",
       "ingredients": [
         "Ingrediente 1",
         "Ingrediente 2",
-        ""
+        "Ingrediente 3",
+        "Ingrediente 4",
+        "Ingrediente 5"
       ],
       "preparation": [
         "Passo 1",
         "Passo 2",
-        "",
-        ""
+        "Passo 3",
+        "Passo 4",
+        "Passo 5",
+        "Passo 6"
       ],
-      "information": "Filme clássico anos 80.",
+      "information": "Filme clássico do final dos anos 80.",
       "local": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg",
       "author": "Hollywood"
     },
@@ -186,7 +190,6 @@
       "information": "Doce foi batizado com esse nome em homenagem ao Brigadeiro das forças armadas aéreas que foi candidato a presidência do Brasil nos anos 60.",
       "local": "/doce.png"
     },
-    
     {
       "id": 9,
       "image": "https://image.flaticon.com/icons/svg/2729/2729027.svg",
@@ -250,7 +253,7 @@
       "criadoEm": 1590676161435
     },
     {
-      "id": 13,
+      "id": "13",
       "image": "https://img.itdg.com.br/tdg/images/recipes/000/036/374/207347/207347_original.jpg?mode=crop&width=710&height=400",
       "title": "Comida Baiana",
       "author": "Soteropolitano",
@@ -264,7 +267,7 @@
         "MIstura tudo",
         "Vatapá"
       ],
-      "information": "Comida típica das festas juninas da Bahia.",
+      "information": "Comida típica das festas juninas da Bahia.\r\nAcompanhamento de uma Coca-Cola",
       "criadoEm": 1590760461541
     }
   ],

@@ -3,25 +3,25 @@
 {% block content %}
 
     
-        <div class="container-header-prato">
-            <div>
-                <h3>Editar receita: {{item.title}}</h3>
-                <section class="div-container-header-prato">
-                    
-                    <form id="form-delete" action="/admin?_method=DELETE" method="post">
-                        <input type="hidden" name="id" value="{{item.id}}">
-                        <button type="submit">Deletar</button>
-                    </form>
+    <div class="container-header-prato">
+        <div>
+            <h3>Editar receita: {{item.title}}</h3>
+            <section class="div-container-header-prato">
+                
+                <form id="form-delete" action="/admin?_method=DELETE" method="post">
+                    <input type="hidden" name="id" value="{{item.id}}">
+                    <button type="submit">Deletar</button>
+                </form>
 
-                    <form method="POST" action="/admin/prato?_method=PUT">
-                        <button type="submit">Salvar alterações</button>
+                <button form="salva_receita" type="submit">Salvar alterações</button>
 
-                </section>
-            </div>
+            </section>
         </div>
-    
-            {% include 'admin/campos.njk' %}
-            <input type="hidden" name="id" value="{{ item.id }}">
+    </div>
+
+    <form id="salva_receita" method="POST" action="/admin/prato?_method=PUT">
+        <input type="hidden" name="id" value="{{ item.id }}">
+        {% include 'admin/campos.njk' %}            
     </form>
 
     <section class="details">
