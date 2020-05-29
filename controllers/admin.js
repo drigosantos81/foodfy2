@@ -73,11 +73,6 @@ exports.exibe = function(req, res) {
         criadoEm: new Intl.DateTimeFormat("pt-BR").format(foundPrato.criadoEm),
     }
 
-    
-    console.log(id);
-    console.log(foundPrato); 
-    console.log(req.params);    
-
     return res.render("admin/prato", { item });
 };
 
@@ -132,9 +127,6 @@ exports.put = function(req, res) {
 
         return res.redirect(`prato/${id}`);
     });
-        
-    console.log(id);
-    console.log(req.body);   
 };
 
 // Comando para deletar o registro encontrado

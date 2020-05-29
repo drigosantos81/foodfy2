@@ -1,3 +1,4 @@
+// Ressaltar o link atual da página
 const currentPage = location.pathname;
 const menuItens = document.querySelectorAll(".links a");
 
@@ -7,6 +8,7 @@ for (item of menuItens) {
     }
 }
 
+// Abrir o modal da página inicial
 function modal() {
     const modal = document.querySelector('.modal');
     const grids = document.querySelectorAll('.receita');
@@ -30,10 +32,7 @@ function modal() {
     });
 }
 
-//     document.getAttribute("id").addEventListener("click", function() {
-//     window.location.href = `/prato/${imageId}`;
-// });
-
+// Ir para página de detalhes da receita escolhida
 function descPrato() {
     const grids = document.querySelectorAll('.receita');
     for (let grid of grids) {
@@ -42,6 +41,39 @@ function descPrato() {
             window.location.href = `/prato/${pratoId}`;
         });
     }
+}
+
+// Esconde/Mostrar detalhes dos ingredientes, preparo e/ou informações adicionais
+// const h4Ing = document.getElementsByClassName("sub-titulos-ing");
+// const h4Prep = document.getElementsByClassName("sub-titulos-preparo");
+// const h4Info = document.getElementsByClassName("sub-titulos-info");
+// const contents = document.querySelectorAll(".conteudo-text");
+// for (let content of contents) {
+//     const buttonH4 = document.querySelector('h4');
+//     buttonH4.addEventListener("click", function() {
+//         if (buttonH4.innerHTML == "ESCONDER") {
+//             content.style.display = "none";
+//             buttonH4.innerHTML = "MOSTRAR"
+//     } else {
+//         content.style.display = "block";
+//         buttonH4.innerHTML = "ESCONDER";
+//         }
+//     });
+// }
+
+const contents = document.getElementsByClassName("showHide");
+for (let content of contents) {
+    const buttonH4 = content.querySelector('h4');
+    const view = document.getElementsByClassName("conteudo-text");
+    buttonH4.addEventListener("click", function() {
+        if (buttonH4.innerHTML == "ESCONDER") {
+            buttonH4.innerHTML = "MOSTRAR";
+            view.style.display = "none";                
+        } else {
+            buttonH4.innerHTML = "ESCONDER";
+            view.style.display = "block";
+        }
+    });
 }
 
 function ocultaIng() {
@@ -80,6 +112,7 @@ function exibeInfo() {
     document.getElementById("showInfo").style.display = "none";
 }
 
+// Adicionar campos em ingredientes
 function addIngredient() {
     const ingredients = document.querySelector("#ingredientes");
     const campoContainer = document.querySelectorAll("#ingrediente");
@@ -98,6 +131,7 @@ function addIngredient() {
     
 }
 
+// Adicionar campos em prepado
 function addPreparo() {
     const preparos = document.querySelector("#preparos");
     const campoContainer = document.querySelectorAll("#preparo");

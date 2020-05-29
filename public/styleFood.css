@@ -301,88 +301,35 @@ body {
     margin: 4px 0px 0px 0px;
 }
 
-.sub-titulos-ing {
-    color: #111111;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 28px;
-    margin: 0px 0px 20px 0px;
-    padding: 0;
+.sub-titulos {
+    margin: 15px 0;
+}
+
+.grid-ing {    
     display: grid;
     grid-template-columns: 140px 1fr;
 }
 
-.sub-titulos-ing div:nth-child(2) {
-    color: #999999;
-    font-size: 11px;
-    line-height: 14px;
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-.sub-titulos-ing div:nth-child(2):hover {
-    cursor: pointer;
-}
-
-.sub-titulos-ing div:nth-child(3) {
-    color: #999999;
-    font-size: 11px;
-    line-height: 14px;
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-.sub-titulos-ing div:nth-child(3):hover {
-    cursor: pointer;
-}
-
-.sub-titulos-preparo {
-    color: #111111;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 28px;
-    margin: 0px 0px 20px 0px;
-    padding: 0;
+.grid-preparo {
     display: grid;
     grid-template-columns: 188px 1fr;
 }
 
-.sub-titulos-preparo div:nth-child(2) {
-    color: #999999;
-    font-size: 11px;
-    line-height: 14px;
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-.sub-titulos-preparo div:nth-child(2):hover {
-    cursor: pointer;
-}
-
-.sub-titulos-preparo div:nth-child(3) {
-    color: #999999;
-    font-size: 11px;
-    line-height: 14px;
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-.sub-titulos-preparo div:nth-child(3):hover {
-    cursor: pointer;
-}
-
-.sub-titulos-info {
-    color: #111111;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 28px;
-    margin: 0px 0px 20px 0px;
-    padding: 0;
+.grid-info {
     display: grid;
     grid-template-columns: 255px 1fr;
 }
 
-.sub-titulos-info div:nth-child(2) {
+.sub-titulos h3 {
+    color: #111111;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-titulos h4 {
     color: #999999;
     font-size: 11px;
     line-height: 14px;
@@ -390,19 +337,7 @@ body {
     margin: 10px 0 0 0;
 }
 
-.sub-titulos-info div:nth-child(2):hover {
-    cursor: pointer;
-}
-
-.sub-titulos-info div:nth-child(3) {
-    color: #999999;
-    font-size: 11px;
-    line-height: 14px;
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-.sub-titulos-info div:nth-child(3):hover {
+.sub-titulos h4:hover {
     cursor: pointer;
 }
 

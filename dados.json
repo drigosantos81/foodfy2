@@ -2,20 +2,20 @@
   "receitas": [
     {
       "id": "7",
-      "title": "Crocodilo Dundee 1",
+      "title": "Crocodilo Dundee",
       "image": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg",
       "ingredients": [
         "Ingrediente 1",
         "Ingrediente 2",
-        "Ingrediente 3"
+        ""
       ],
       "preparation": [
         "Passo 1",
         "Passo 2",
-        "Passo 3",
-        "Passo 4"
+        "",
+        ""
       ],
-      "information": "Filme clássico.",
+      "information": "Filme clássico anos 80.",
       "local": "https://upload.wikimedia.org/wikipedia/en/1/17/Crocodile_Dundee_in_Los_Angeles.jpg",
       "author": "Hollywood"
     },
@@ -196,7 +196,7 @@
       "preparation": [
         "Grunge"
       ],
-      "information": "Rock atitude em Seattle.",
+      "information": "Rock atitude de Seattle.",
       "id": "11",
       "criadoEm": 1590177346247
     },
@@ -259,7 +259,7 @@
         "Rock",
         "Vocal"
       ],
-      "information": "Blues!!! Pop.",
+      "information": "Blues & Pop.",
       "criadoEm": 1590676161435
     }
   ],

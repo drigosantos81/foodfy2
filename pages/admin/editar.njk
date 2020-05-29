@@ -14,15 +14,14 @@
                     </form>
 
                     <form method="POST" action="/admin/prato?_method=PUT">
-                    
-                    <button type="submit">Salvar alterações</button>
+                        <button type="submit">Salvar alterações</button>
 
                 </section>
             </div>
         </div>
     
             {% include 'admin/campos.njk' %}
-            
+            <input type="hidden" name="id" value="{{ item.id }}">
     </form>
 
     <section class="details">

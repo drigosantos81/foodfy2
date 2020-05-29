@@ -23,43 +23,51 @@
         <p>{{item.author}}</p>
     </div>
     
-    <div class="sub-titulos-ing">
-        <div>Ingredientes</div>
-        <div id="hideIng" style="display: block" onclick="ocultaIng()">ESCONDER</div>
-        <div id="showIng" style="display: none" onclick="exibeIng()">MOSTRAR</div>
+    <div class="showHide">
+        <div class="sub-titulos">
+            <div class="grid-ing">
+                <h3>Ingredientes</h3>
+                <h4>ESCONDER</h4>
+            </div>
+        </div>
+
+        <div style="display: block" class="conteudo-text" id="ingredientes">
+            <ul>
+                {% for ingredient in item.ingredients %}
+                    <li>{{ingredient}}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
-    <div id="ingredientes" class="conteudo-text" style="display: block">
-        <ul>
-            {% for ingredient in item.ingredients %}
-                <li>{{ingredient}}</li>
-            {% endfor %}
+    <div class="showHide">
+        <div class="sub-titulos">
+            <div class="grid-preparo">
+                <h3>Modo de preparo</h3>
+                <h4>ESCONDER</h4>
+            </div>
+        </div>
 
-        </ul>
+        <div class="conteudo-text" id="preparo">
+            <ul>
+                {% for preparation1 in item.preparation %}
+                    <li>{{preparation1}}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
-    <div class="sub-titulos-preparo">
-        <div>Modo de preparo</div>
-        <div id="hidePreparo" style="display: block" onclick="ocultaPreparo()">ESCONDER</div>
-        <div id="showPreparo" style="display: none" onclick="exibePreparo()">MOSTRAR</div>
-    </div>
+    <div class="showHide">
+        <div class="sub-titulos">
+            <div class="grid-info">
+                <h3>Informações adicionais</h3>
+                <h4>ESCONDER</h4>
+            </div>
+        </div>
 
-    <div id="preparo" class="conteudo-text" style="display: block">
-        <ul>
-            {% for preparation1 in item.preparation %}
-                <li>{{preparation1}}</li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="sub-titulos-info">
-        <div>Informações adicionais</div>
-        <div id="hideInfo" style="display: block" onclick="ocultaInfo()">ESCONDER</div>
-        <div id="showInfo" style="display: none" onclick="exibeInfo()">MOSTRAR</div>
-    </div>
-
-    <div id="infoAd" class="conteudo-text" style="display: block">
-        <p>{{item.information}}</p>
+        <div id="infoAd">
+            <p>{{item.information}}</p>
+        </div>
     </div>
 
     <div class="desde">

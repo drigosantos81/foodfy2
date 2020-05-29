@@ -1,7 +1,7 @@
-const receitas = require('../dados.js');
+const receitas = require('../dados.json');
 
 exports.index = function(req, res) {
-    return res.render("frontend/index", { items: receitas });
+    return res.render("frontend/index", { items: receitas.receitas });
 };
 
 exports.sobre = function(req, res) {
@@ -9,20 +9,20 @@ exports.sobre = function(req, res) {
 };
 
 exports.receitas = function(req, res) {
-    return res.render("frontend/receitas", { items: receitas });
+    return res.render("frontend/receitas", { items: receitas.receitas });
 };
 
 exports.prato = function(req, res) {
     const receitaIndex = req.params.id;
 
-    const receita = receitas.find(function(receita) {
-        return receitaIndex == receita.id;
+    const foundReceita = receitas.receitas.find(function(item) {
+        return receitaIndex == item.id;
     });
 
-    if (!receita) {
+    if (!foundReceita) {
         return res.render("frontend/not-found");
     }
-    return res.render("frontend/prato", { item: receita });
+    return res.render("frontend/prato", { item: foundReceita });
 };
 
 exports.notFound = function(req, res) {
