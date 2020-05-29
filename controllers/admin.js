@@ -1,11 +1,10 @@
 const fs = require('fs');
 const Intl = require('intl');
-const receitas = require('../dados.js'); // Arquivo de dados JS
-const newReceitas = require('../dados.json'); // Arquivo de dados JSON
+const receitas = require('../dados.json'); // Arquivo de dados JSON
 
 // Exibe a página inicial do Admin
 exports.index = function(req, res) {
-    return res.render("admin/index", { items: newReceitas.receitas });
+    return res.render("admin/index", { items: receitas.receitas });
 };
 
 // Exibe o formulário de cadastro de nova receita
@@ -30,10 +29,10 @@ exports.post = function(req, res) {
     let { image, title, author, ingredients, preparation, information } = req.body;
 
     // Os campos que não vieram no formulário precisam estar em variaveis cada, para trabalhar com a desestruturação do (req.body)
-    const id = Number(newReceitas.receitas.length + 1); // Inserindo informação num campo automaticamente, sem aparecer na tela
+    const id = Number(receitas.receitas.length + 1); // Inserindo informação num campo automaticamente, sem aparecer na tela
     const criadoEm = Date.now();
 
-    newReceitas.receitas.push({
+    receitas.receitas.push({
         id, 
         image,
         title,
@@ -45,7 +44,7 @@ exports.post = function(req, res) {
     });
 
     // Gravando as informações no arquivo.
-    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+    fs.writeFile("dados.json", JSON.stringify(receitas, null, 2), function(err) {
         if (err) {
             return res.send("Erro ao salvar as informações.");
         }
@@ -59,7 +58,7 @@ exports.exibe = function(req, res) {
 
     const { id } = req.params;
 
-    const foundPrato = newReceitas.receitas.find(function(item) {
+    const foundPrato = receitas.receitas.find(function(item) {
         return item.id == id;
     });
 
@@ -81,7 +80,7 @@ exports.edita = function(req, res) {
     
     const { id } = req.params;
 
-    const foundPrato = newReceitas.receitas.find(function(item) {
+    const foundPrato = receitas.receitas.find(function(item) {
         return item.id == id;
     });
 
@@ -101,7 +100,7 @@ exports.put = function(req, res) {
     let index = 0;
 
     // 'find' é uma estrutura de repetição. Pode receber dois parametros. O segundo é o índice encontrado
-    const foundPrato = newReceitas.receitas.find(function(item, foundIndex) {
+    const foundPrato = receitas.receitas.find(function(item, foundIndex) {
         if (id == item.id) {
             index = foundIndex;
             return true;
@@ -118,9 +117,9 @@ exports.put = function(req, res) {
     }
 
     // Verificação da posição do index
-    newReceitas.receitas[index] = item;
+    receitas.receitas[index] = item;
 
-    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+    fs.writeFile("dados.json", JSON.stringify(receitas, null, 2), function(err) {
         if (err) {
             return res.send("Erro ao salvar a informação");
         }
@@ -134,15 +133,15 @@ exports.delete = function(req, res) {
     const { id } = req.body;
     
     // Função de busca no array 'filter'
-    const filtroPrato = newReceitas.receitas.filter(function(item) {
+    const filtroPrato = receitas.receitas.filter(function(item) {
         return item.id != id;
     });
 
-    newReceitas.receitas = filtroPrato;
+    receitas.receitas = filtroPrato;
 
     console.log(filtroPrato);   
     
-    fs.writeFile("dados.json", JSON.stringify(newReceitas, null, 2), function(err) {
+    fs.writeFile("dados.json", JSON.stringify(receitas, null, 2), function(err) {
         if (err) {
             return res.send("Erro ao salvar a informação");
         }

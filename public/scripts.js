@@ -43,73 +43,20 @@ function descPrato() {
     }
 }
 
-// Esconde/Mostrar detalhes dos ingredientes, preparo e/ou informações adicionais
-// const h4Ing = document.getElementsByClassName("sub-titulos-ing");
-// const h4Prep = document.getElementsByClassName("sub-titulos-preparo");
-// const h4Info = document.getElementsByClassName("sub-titulos-info");
-// const contents = document.querySelectorAll(".conteudo-text");
-// for (let content of contents) {
-//     const buttonH4 = document.querySelector('h4');
-//     buttonH4.addEventListener("click", function() {
-//         if (buttonH4.innerHTML == "ESCONDER") {
-//             content.style.display = "none";
-//             buttonH4.innerHTML = "MOSTRAR"
-//     } else {
-//         content.style.display = "block";
-//         buttonH4.innerHTML = "ESCONDER";
-//         }
-//     });
-// }
-
+// Botão ESCONDER/MOSTRAR detalhes da receita
 const contents = document.getElementsByClassName("showHide");
 for (let content of contents) {
     const buttonH4 = content.querySelector('h4');
-    const view = document.getElementsByClassName("conteudo-text");
     buttonH4.addEventListener("click", function() {
+        const view = content.querySelector(".conteudo-text");
         if (buttonH4.innerHTML == "ESCONDER") {
-            buttonH4.innerHTML = "MOSTRAR";
-            view.style.display = "none";                
+            view.style.display = "none";
+            buttonH4.innerHTML = "MOSTRAR";            
         } else {
-            buttonH4.innerHTML = "ESCONDER";
             view.style.display = "block";
+            buttonH4.innerHTML = "ESCONDER";
         }
     });
-}
-
-function ocultaIng() {
-    document.getElementById("ingredientes").style.display = "none";
-    document.getElementById("hideIng").style.display = "none";
-    document.getElementById("showIng").style.display = "block";
-}
-
-function exibeIng() {
-    document.getElementById("ingredientes").style.display = "block";
-    document.getElementById("hideIng").style.display = "block";
-    document.getElementById("showIng").style.display = "none";
-}
-
-function ocultaPreparo() {
-    document.getElementById("preparo").style.display = "none";
-    document.getElementById("hidePreparo").style.display = "none";
-    document.getElementById("showPreparo").style.display = "block";
-}
-
-function exibePreparo() {
-    document.getElementById("preparo").style.display = "block";
-    document.getElementById("hidePreparo").style.display = "block";
-    document.getElementById("showPreparo").style.display = "none";
-}
-
-function ocultaInfo() {
-    document.getElementById("infoAd").style.display = "none";
-    document.getElementById("hideInfo").style.display = "none";
-    document.getElementById("showInfo").style.display = "block";
-}
-
-function exibeInfo() {
-    document.getElementById("infoAd").style.display = "block";
-    document.getElementById("hideInfo").style.display = "block";
-    document.getElementById("showInfo").style.display = "none";
 }
 
 // Adicionar campos em ingredientes
@@ -127,8 +74,7 @@ function addIngredient() {
 
     // Deixa o novo input vazio
     newCampo.children[0].value = "";
-    ingredients.appendChild(newCampo);
-    
+    ingredients.appendChild(newCampo);    
 }
 
 // Adicionar campos em prepado
@@ -143,6 +89,5 @@ function addPreparo() {
     }
 
     newCampo.children[0].value = "";
-    preparos.appendChild(newCampo);
-    
+    preparos.appendChild(newCampo);    
 }

@@ -15,15 +15,14 @@
         <p>{{item.author}}</p>
     </div>
 
-    <div class="hideShow">
+    <div class="showHide">
         <div class="sub-titulos">
             <div class="grid-ing">
                 <h3>Ingredientes</h3>
-                <h4 id="hideIng" style="display: block" onclick="ocultaIng()">ESCONDER</h4>
-                <h4 id="showIng" style="display: none" onclick="exibeIng()">MOSTRAR</h4>
+                <h4>ESCONDER</h4>
             </div>
         </div>
-        <div id="ingredientes" class="conteudo-text" style="display: block">
+        <div id="ingredientes" class="conteudo-text">
             <ul>
                 {% for ingredient in item.ingredients %}
                     <li>{{ingredient}}</li>
@@ -32,15 +31,14 @@
             </ul>
         </div>
     </div>
-    <div class="hideShow">
+    <div class="showHide">
         <div class="sub-titulos">
             <div class="grid-preparo">
                 <h3>Modo de preparo</h3>
-                <h4 id="hidePreparo" style="display: block" onclick="ocultaPreparo()">ESCONDER</h4>
-                <h4 id="showPreparo" style="display: none" onclick="exibePreparo()">MOSTRAR</h4>
+                <h4>ESCONDER</h4>
             </div>
         </div>
-        <div id="preparo" class="conteudo-text" style="display: block">
+        <div id="preparo" class="conteudo-text">
             <ul>
                 {% for preparation1 in item.preparation %}
                     <li>{{preparation1}}</li>
@@ -48,15 +46,14 @@
             </ul>
         </div>
     </div>
-    <div class="hideShow">
+    <div class="showHide">
         <div class="sub-titulos">
             <div class="grid-info">
                 <h3>Informações adicionais</h3>
-                <h4 id="hideInfo" style="display: block" onclick="ocultaInfo()">ESCONDER</h4>
-                <h4 id="showInfo" style="display: none" onclick="exibeInfo()">MOSTRAR</h4>
+                <h4>ESCONDER</h4>
             </div>
         </div>
-            <div id="infoAd" class="conteudo-text" style="display: block">
+            <div id="infoAd" class="conteudo-text">
             <p>{{item.information}}</p>
         </div>
     </div>
